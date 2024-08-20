@@ -1,0 +1,44 @@
+@import "../../../styles/index.scss";
+
+.dashboard {  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 815px;
+  background-image: url("../../../assets/img/background-dashboard.png"); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;   
+  .wrapper {  
+    position: relative;  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1180px;
+    width: 100%;
+  }
+  .blockText {
+    max-width: 550px;
+    width: 100%;
+    &__title {
+      @include roboto-700(50px, 60px);
+      color: #FFFFFF;
+      margin-bottom: 15px;
+    }
+    &__subtitle {
+      @include roboto-400(18px, 25.2px);
+      color: #8794BA;
+      margin-bottom: 50px;
+    }
+  }
+  .image {
+    position: absolute;
+    right: -7%;
+    max-width: 700px;
+    width: 100%;
+  }
+}
+

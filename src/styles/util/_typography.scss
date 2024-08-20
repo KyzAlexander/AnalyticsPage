@@ -1,0 +1,15 @@
+@mixin roboto-400($fontSize, $lineHeight: unset) {
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin roboto-700($fontSize, $lineHeight: unset) {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
