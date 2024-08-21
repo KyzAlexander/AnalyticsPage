@@ -1,0 +1,20 @@
+@import "../../../styles/index.scss";
+
+.button {
+  max-width: 238px;
+  width: 100%;
+  padding: 14px 0; 
+  border-radius: 68px;
+  cursor: pointer;
+  @include roboto-400(16px, 22.4px);
+}
+.buttonPing {
+  background-color: #EF2A82;
+  color: #FFFFFF;
+  border: 2px solid #EF2A82;
+}
+.buttonBorder {
+  border: 2px solid #465B95;
+  color: #8794BA;
+  background-color: #172755;
+}

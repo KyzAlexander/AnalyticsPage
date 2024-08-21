@@ -1,4 +1,5 @@
 import graphicImage from "../../../assets/img/graphic-image.png"
+import Button from "../../common/Button/Button";
 import style from "./dashboard.module.scss";
 
 const Dashboard = () => {
@@ -12,7 +13,7 @@ const Dashboard = () => {
             nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae
             nibh nunc mattis imperdiet sed nullam.{" "}
           </p>
-          <div className={style.blockText__button}></div>
+          <div className={style.blockText__button}><Button isPing={true} text="Try for free" /></div>
         </div>
         <img className={style.image} src={graphicImage} alt="graphic" />
       </div>

@@ -1,0 +1,45 @@
+@import "../../../styles/index.scss";
+
+.mainFeatures {  
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  max-width: 1180px;
+  width: 100%;
+  margin-top: 79px;
+  .title {
+    @include roboto-700(40px, 48px);
+    color: #172755;
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    @include roboto-400(18px, 25.2px);
+    color: #8794BA;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .featureBlocks {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    .featureBlock {
+      display: flex;
+      flex-direction: column;       
+      align-items: center; 
+      &__title {
+        @include roboto-700(16px, 22.4px);
+        color: #172755;
+        margin-top: 30px;
+      }
+      &__subtitle {
+        @include roboto-400(16px, 22.4px);
+        color: #8794BA;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+  
+}
+
