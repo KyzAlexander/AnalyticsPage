@@ -6,7 +6,9 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1180px;
-  width: 100%;  
+  width: 100%;
+  border-top: 1px solid rgba(238, 238, 246, 0.1);  
+  padding-top: 60px; 
   &__items {
     display: flex;
     flex-direction: row;

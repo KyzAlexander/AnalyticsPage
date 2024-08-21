@@ -4,6 +4,7 @@ import "./styles/_App.scss";
 import Dashboard from "./components/layouts/Dashboard";
 import MainFeatures from "./components/layouts/MainFeatures";
 import Footer from "./components/common/Footer";
+import PricingPlans from "./components/layouts/PricingPlans";
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
         <Header />
         <Dashboard />
         <MainFeatures />
-        <Footer />
+        <div className="wrapperBackground">
+          <PricingPlans />
+          <Footer />
+        </div>
       </BrowserRouter>
     </div>
   );

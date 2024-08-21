@@ -1,0 +1,55 @@
+@import "../../../styles/index.scss";
+
+.cardInSlide {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  max-width: 338px;
+  width: 100%;
+  padding: 50px 50px 70px 50px;
+  background-color: #172755;
+  border: 2px solid #465B95;
+  border-radius: 30px;
+  &__title {
+    @include roboto-700(40px, 48px);
+    color: #ffff;
+    margin-bottom: 10px;
+  }
+  &__subtitle { 
+    position: relative;   
+    @include roboto-400(18px, 25.2px);
+    color:#8794BA;    
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__subtitle::after {
+    position: absolute;
+    content: "";
+    width: 238px;    
+    border-bottom: 1px solid rgba(238, 238, 246, 0.1);
+    bottom: -150%;
+  }
+  &__price {
+    @include roboto-700(50px, 60px);
+    color:#ffff;
+  }
+  &__priceText {
+    @include roboto-400(16px, 22.4px);
+    color:#8794BA;
+    margin-bottom: 40px;
+  }
+  &__button {
+    width: 100%;
+  }  
+}
+
+.activeCardInSlide {
+  background-color: #ffff;
+  border: 2px solid #ffff;
+  .activeTitle, .activePrice {
+    color: #172755;
+  }
+}

@@ -3,5 +3,18 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;   
-  min-height: 100vh;  
+  min-height: 100vh; 
+  
+  .wrapperBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 1225px;
+    background-image: url("../assets/img/background-footer.png"); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+  }
 }
