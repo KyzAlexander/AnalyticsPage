@@ -12,9 +12,17 @@
   background-color: #EF2A82;
   color: #FFFFFF;
   border: 2px solid #EF2A82;
+  transition: background-color 0.5s ease;
+}
+.buttonPing:hover {
+  background-color: #A60C51;  
 }
 .buttonBorder {
   border: 2px solid #465B95;
   color: #8794BA;
   background-color: #172755;
+  transition: background-color 0.5s ease;
+}
+.buttonBorder:hover {
+  background-color: #364672;
 }

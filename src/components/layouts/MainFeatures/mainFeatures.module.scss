@@ -1,32 +1,54 @@
 @import "../../../styles/index.scss";
 
-.mainFeatures {  
+.mainFeatures { 
+  position: relative; 
   display: flex;
   flex-direction: column;  
   align-items: center;
   max-width: 1180px;
   width: 100%;
   margin-top: 79px;
+  padding-bottom: 776px; 
+  @media (max-width: 1060px) {
+    margin-top: 10px; 
+    justify-content: flex-start;
+    padding-bottom: 0;
+  } 
   .title {
     @include roboto-700(40px, 48px);
     color: #172755;
     margin-bottom: 30px;
+    @media (max-width: 1060px) {
+      @include roboto-700(30px, 36px); 
+    }
   }
   .subtitle {
     @include roboto-400(18px, 25.2px);
     color: #8794BA;
     margin-bottom: 80px;
     text-align: center;
+    @media (max-width: 1060px) {
+      @include roboto-400(16px, 22.4px);
+      margin-bottom: 50px;     
+    }
   }
   .featureBlocks {
     display: flex;
     flex-direction: row; 
     justify-content: space-between; 
     align-items: center;
+    @media (max-width: 1060px) {
+      flex-direction: column; 
+      justify-content: flex-start; 
+      align-items: center; 
+    }
     .featureBlock {
       display: flex;
       flex-direction: column;       
       align-items: center; 
+      @media (max-width: 1060px) {
+        margin-bottom: 20px; 
+      }
       &__title {
         @include roboto-700(16px, 22.4px);
         color: #172755;
@@ -39,6 +61,18 @@
         text-align: center;
       }
     }
+  }
+  .form {
+    position: absolute;
+    bottom: -9%;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+    @media (max-width: 1060px) {
+      position: relative;  
+      bottom: 0;   
+    }   
   }
   
 }

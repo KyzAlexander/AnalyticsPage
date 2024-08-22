@@ -23,7 +23,8 @@ const MainFeatures = () => {
           );
         })}
       </div>
-      <RegistrationForm />
+      <div className={style.form}><RegistrationForm /></div>
+
     </section>
   );
 };

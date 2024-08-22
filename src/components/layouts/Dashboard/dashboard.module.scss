@@ -1,6 +1,7 @@
 @import "../../../styles/index.scss";
 
 .dashboard {  
+  position: relative; 
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,7 +11,13 @@
   background-image: url("../../../assets/img/background-dashboard.png"); 
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;   
+  background-size: cover;  
+  overflow-x: hidden; 
+  @media (max-width: 1060px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;     
+  }
   .wrapper {  
     position: relative;  
     display: flex;
@@ -19,6 +26,16 @@
     align-items: center;
     max-width: 1180px;
     width: 100%;
+    @media (max-width: 1200px) {
+      padding: 0 20px;  
+    }
+    @media (max-width: 1060px) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 100px; 
+    } 
   }
   .blockText {
     max-width: 550px;
@@ -27,21 +44,42 @@
       @include roboto-700(50px, 60px);
       color: #FFFFFF;
       margin-bottom: 15px;
+      @media (max-width: 1060px) {
+        @include roboto-700(30px, 36px); 
+      }
     }
     &__subtitle {
       @include roboto-400(18px, 25.2px);
       color: #8794BA;
       margin-bottom: 50px;
+      @media (max-width: 1060px) {
+        @include roboto-400(16px, 22.4px);
+        margin-bottom: 20px; 
+      }
     }
     &__button {
       width: 100%;
+      @media (max-width: 1060px) {
+        display: flex; 
+        justify-content: center;  
+      } 
     }
   }
   .image {
     position: absolute;
     right: -7%;
     max-width: 700px;
-    width: 100%;
+    width: 100%; 
+    @media (max-width: 1153px) {
+      max-width: 600px;  
+    } 
+    @media (max-width: 1060px) {
+      max-width: 400px; 
+      position: relative; 
+      right: 0;
+      // margin-top: 20px;
+      margin-bottom: 25px;
+    }  
   }
 }
 

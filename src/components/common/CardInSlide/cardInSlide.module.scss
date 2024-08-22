@@ -5,8 +5,9 @@
   flex-direction: column; 
   justify-content: center; 
   align-items: center;
-  max-width: 338px;
+  max-width: 338px; 
   width: 100%;
+  box-sizing: border-box;
   padding: 50px 50px 70px 50px;
   background-color: #172755;
   border: 2px solid #465B95;
@@ -48,7 +49,7 @@
 
 .activeCardInSlide {
   background-color: #ffff;
-  border: 2px solid #ffff;
+  border: 2px solid #ffff;  
   .activeTitle, .activePrice {
     color: #172755;
   }

@@ -1,8 +1,28 @@
+import { useEffect, useState } from "react";
 import graphicImage from "../../../assets/img/graphic-image.png"
+import graphicImageMobile from "../../../assets/img/graphic-image-mobile.png"
 import Button from "../../common/Button/Button";
 import style from "./dashboard.module.scss";
 
 const Dashboard = () => {
+  const [image, setImage] = useState(graphicImage);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1060) {
+        setImage(graphicImageMobile);
+      } else {
+        setImage(graphicImage);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [image]);
   return (
     <section className={style.dashboard}>
       <div className={style.wrapper}>
@@ -15,7 +35,7 @@ const Dashboard = () => {
           </p>
           <div className={style.blockText__button}><Button isPing={true} text="Try for free" /></div>
         </div>
-        <img className={style.image} src={graphicImage} alt="graphic" />
+        <img className={style.image} src={image} alt="graphic" />
       </div>
     </section>
   );

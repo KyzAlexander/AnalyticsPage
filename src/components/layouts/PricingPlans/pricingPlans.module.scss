@@ -6,6 +6,7 @@
   align-items: center;
   max-width: 1180px;
   width: 100%;
+  margin-top: 90px;  
   &__title {
     @include roboto-700(40px, 48px);
     color: #ffff;
@@ -15,5 +16,50 @@
     @include roboto-400(18px, 25.2px);
     color: #8794BA;
     margin-bottom: 60px;
+  }  
+  &__sliderBlock {
+    max-width: 1180px;   
+    width: 100%;
+    display: flex;
+    justify-content: center;    
   }
+  .mySwiper {      
+    width: 100%;
+    .mySwiperSlide {
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+      max-width: 33%;
+                
+    }   
+  } 
+
+  //-------------------
+  .pricingPlans__sliderBlock {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mySwiper {
+    .swiper-slide {
+      opacity: 0.5; // Default opacity for non-active slides
+      transition: opacity 0.3s ease;
+    }
+  
+    .swiper-slide-active {
+      opacity: 1; // Full opacity for the active slide
+    }
+  }
+  
+  @media (max-width: 1060px) {
+    .mySwiper {
+      .swiper-slide {
+        transform: scale(0.8); // Scale down the slides that are not active
+      }
+      
+      .swiper-slide-active {
+        transform: scale(1); // Full scale for the active slide
+      }
+    }
+  } 
 }

@@ -6,6 +6,7 @@
   min-height: 100vh; 
   
   .wrapperBackground {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,6 +16,6 @@
     background-image: url("../assets/img/background-footer.png"); 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; 
-  }
+    background-size: cover;    
+  }  
 }

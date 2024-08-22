@@ -9,15 +9,35 @@
   align-items: center;  
   width: 100%;
   background-color: #172755;
-  padding: 10px 0;
+  padding: 10px 0;  
   .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     max-width: 1180px;
-    width: 100%;    
+    width: 100%; 
+    @media (max-width: 1060px) {
+      flex-direction: column; 
+      justify-content: flex-start;
+      align-items: center;      
+    }      
   }
+  &__wrapperLogo {
+    transition: transform 0.3s ease;
+    @media (max-width: 1060px) {
+      max-width: 1180px;
+      width: 100%;
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;      
+    }    
+  }
+  &__wrapperLogo:hover {
+    transform: scale(1.1);
+  }  
   &__items {
     display: flex;
     flex-direction: row;
@@ -25,10 +45,14 @@
     align-items: center;
     max-width: 370px;
     width: 100%;
+    @media (max-width: 1060px) {
+      display: none;        
+    }
     .item {
       @include roboto-400(16px, 22.4px);
       text-decoration: none;
       color: #8794BA;
+      transition: color 0.5s ease;
     }
     .item:hover {
       color: #ffff;
@@ -37,5 +61,55 @@
   &__button {
     max-width: 238px;
     width: 100%;
+    @media (max-width: 1060px) {
+      display: none;        
+    }
   }
+  .menuToggle {
+    display: none;
+    cursor: pointer;    
+    @media (max-width: 1060px) {
+      display: block;        
+    }  
+    .burger {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      position: relative;
+      transition: all 0.3s ease;  
+      &::before,
+      &::after {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+      }  
+      &::before {
+        top: -8px;
+      }  
+      &::after {
+        top: 8px;
+      }
+    }  
+    .open {
+      background-color: transparent;  
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }  
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+
+  .mobileMenu {
+    max-width: 700px;
+    width: 100%;
+  }
+  
 }
