@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/AnalyticsPage/static/css/main.838acf2d.css",
+    "main.js": "/AnalyticsPage/static/js/main.af6ea197.js",
+    "static/media/Roboto-Regular.ttf": "/AnalyticsPage/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
+    "static/media/Roboto-Bold.ttf": "/AnalyticsPage/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
+    "static/media/graphic-image.png": "/AnalyticsPage/static/media/graphic-image.e512fd0edce948015994.png",
+    "static/media/graphic-image-mobile.png": "/AnalyticsPage/static/media/graphic-image-mobile.50c1282d0982c7abb7cd.png",
+    "static/media/map-image.png": "/AnalyticsPage/static/media/map-image.bb196a04aa14fa96c722.png",
+    "static/media/background-dashboard.png": "/AnalyticsPage/static/media/background-dashboard.3e2ab2d47d1a8732df19.png",
+    "static/media/background-footer.png": "/AnalyticsPage/static/media/background-footer.816fabf8c42692d98886.png",
+    "index.html": "/AnalyticsPage/index.html",
+    "main.838acf2d.css.map": "/AnalyticsPage/static/css/main.838acf2d.css.map",
+    "main.af6ea197.js.map": "/AnalyticsPage/static/js/main.af6ea197.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.838acf2d.css",
+    "static/js/main.af6ea197.js"
+  ]
+}
