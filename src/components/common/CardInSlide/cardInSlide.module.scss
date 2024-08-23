@@ -12,10 +12,21 @@
   background-color: #172755;
   border: 2px solid #465B95;
   border-radius: 30px;
+  @media (max-width: 1060px) {
+    max-width: 300px;
+    padding: 40px 40px 60px 40px;
+  } 
+  @media (max-width: 650px) {
+    max-width: 270px;
+    padding: 20px 20px 40px 20px;
+  }
   &__title {
     @include roboto-700(40px, 48px);
     color: #ffff;
     margin-bottom: 10px;
+    @media (max-width: 1060px) {
+      @include roboto-700(28px, 33.6px);
+    }
   }
   &__subtitle { 
     position: relative;   
@@ -25,6 +36,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1060px) {
+      @include roboto-400(16px, 22.4px);
+      margin-bottom: 60px;
+    }
   }
   &__subtitle::after {
     position: absolute;
@@ -36,11 +51,17 @@
   &__price {
     @include roboto-700(50px, 60px);
     color:#ffff;
+    @media (max-width: 1060px) {
+      @include roboto-700(30px, 36px);
+    }
   }
   &__priceText {
     @include roboto-400(16px, 22.4px);
     color:#8794BA;
     margin-bottom: 40px;
+    @media (max-width: 1060px) {
+      @include roboto-400(14px, 19.6px);
+    }
   }
   &__button {
     width: 100%;

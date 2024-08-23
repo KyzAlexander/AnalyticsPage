@@ -62,6 +62,9 @@
       align-items: flex-start;
       max-width: 430px;
       width: 100%;
+      .errorStyle {
+        color: red;
+      }
       &__text {
         @include roboto-700(16px, 22.4px);
         color: #252B42;
@@ -77,10 +80,13 @@
         border-radius: 8px;
         @include roboto-400(16px, 22.4px);
         color: #172755;
+        outline: none;
       }
       &__name::placeholder, &__email::placeholder, &__phone::placeholder {
-        color: #8794BA; /* Замените #yourColor на нужный цвет */
-        opacity: 1; /* Для того чтобы цвет placeholder был ярче */
+        color: #8794BA;        
+      }
+      &__name:focus, &__email:focus, &__phone:focus {
+        border: 1px solid #2684FF;       
       }
       &__phone {
         margin-bottom: 40px;
@@ -92,104 +98,24 @@
         cursor: pointer;
         display: flex;
         flex-direction: row;        
-        align-items: center;
+        align-items: center;      
       }
-      // .selectOpen {
-      //   border-radius: 8px;
-      //   background-color: #FFFFFF;
-      //   margin-top: 4px;
-      //   border: 2px solid rgba(238, 238, 246, 0.1);
-      // }
 
-      //------------
-      .select {
-        width: 100%;
-        padding: 0;
-        // padding: 14px 0 14px 20px;
-        // background-color: yellowgreen;
-        // border: none;
-        // border-radius: 8px;
-        // // appearance: none;
-        // cursor: pointer;
-        // color: #172755;
-        &__control {
-          background-color: yellowgreen;
-        }
-        
+      .customIndicator {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 10px;        
+      }       
+      
+      .customIndicator.open {
+        transform: rotate(180deg);
       }
       
-      // .selectOpen {
-      //   background-color: #FFFFFF;
-      //   border-radius: 8px;
-      //   border: 2px solid rgba(238, 238, 246, 0.1);
-      // }
-
-      //------------
-
-
-      // .select {
-      //   width: 100%;
-      //   padding: 14px 0 14px 20px;
-      //   // background-color: #EEEEF6;
-      //   background-color: yellowgreen;
-      //   border: none;
-      //   border-radius: 8px;
-      //   appearance: none;
-      //   cursor: pointer;
-      //   @include roboto-400(16px, 22.4px);
-      //   color: #172755;
-      //   .option {
-      //     @include roboto-400(16px, 22.4px);
-      //     color: #172755;          
-      //   } 
-      //   // .option:disabled {
-      //   //   // color: #8794BA;
-      //   //   color: red;
-      //   //   opacity: 1;         
-      //   // } 
-      //   .optionDisable {
-      //     // color: #8794BA;
-      //     color: red;
-      //     opacity: 1;
-      //   }
-      // }
-      // &__select::after {
-      //   content: '';
-      //   position: absolute;
-      //   top: 100%;
-      //   left: 0;
-      //   right: 0;
-      //   background-color: #FFFFFF;
-      //   border-radius: 8px;
-      //   margin-top: 4px;
-      //   border: 2px solid rgba(238, 238, 246, 0.1);
-      //   z-index: 0;
-      //   // display: none; /* скрываем псевдоэлемент */
-      // }
-      // .selectOpen  {
-      //   &__select::after {
-      //     display: block;
-      //   }       
-      // }
-
-      // &__selectArrow {
-      //   position: absolute;
-      //   right: 5%;
-      //   transition: transform 0.3s ease        
-      // }
-
-      // .selectOpenArrow {        
-      //   transform: rotate(180deg); 
-      //   transition: transform 0.3s ease;
-      // }
-      // &__name:active {
-      //   border: 2px solid #172755;
-      // }
-
-
-
-
-
+      .select {
+        width: 100%;
+        padding: 0;             
+      }     
 
       &__button {
         width: 100%;

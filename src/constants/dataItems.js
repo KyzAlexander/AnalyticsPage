@@ -1,18 +1,18 @@
 export const dataItems = [
   {
     item: "Products",
-    link: "/products"
+    link: "/products",
   },
   {
     item: "Features",
-    link: "/features"
+    link: "/features",
   },
   {
     item: "Registration",
-    link: "/registration"
+    link: "/registration",
   },
   {
     item: "Pricing",
-    link: "/pricing"
+    link: "/pricing",
   },
-]
+];
